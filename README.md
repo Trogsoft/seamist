@@ -1,0 +1,2 @@
+# seamist
+Embeddable CMS
