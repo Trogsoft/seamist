@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trogsoft.SeaMist.Demo.Mvc", "Trogsoft.SeaMist.Demo.Mvc\Trogsoft.SeaMist.Demo.Mvc.csproj", "{A12D80F9-B233-4FB7-AE19-FF432F4B2EC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trogsoft.SeaMist.Admin", "Trogsoft.SeaMist.Admin\Trogsoft.SeaMist.Admin.csproj", "{FCEEC16B-A64D-4513-BB79-DCB91BA6B16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trogsoft.SeaMist.Core", "Trogsoft.SeaMist.Core\Trogsoft.SeaMist.Core.csproj", "{D339E8E3-ADB9-49C8-85A0-06B67C831ED2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A12D80F9-B233-4FB7-AE19-FF432F4B2EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A12D80F9-B233-4FB7-AE19-FF432F4B2EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A12D80F9-B233-4FB7-AE19-FF432F4B2EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A12D80F9-B233-4FB7-AE19-FF432F4B2EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCEEC16B-A64D-4513-BB79-DCB91BA6B16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCEEC16B-A64D-4513-BB79-DCB91BA6B16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCEEC16B-A64D-4513-BB79-DCB91BA6B16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCEEC16B-A64D-4513-BB79-DCB91BA6B16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D339E8E3-ADB9-49C8-85A0-06B67C831ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D339E8E3-ADB9-49C8-85A0-06B67C831ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D339E8E3-ADB9-49C8-85A0-06B67C831ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D339E8E3-ADB9-49C8-85A0-06B67C831ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEB205F4-067B-4208-A0D4-63BFBDF3ADD7}
+	EndGlobalSection
+EndGlobal
