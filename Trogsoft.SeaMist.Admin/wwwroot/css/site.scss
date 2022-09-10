@@ -1,0 +1,61 @@
+﻿$baby-blue-eyes: rgba(155, 189, 229, 1);
+$cobalt-blue: rgba(0, 75, 168, 1);
+$davys-grey: rgba(74, 82, 90, 1);
+$raisin-black: rgba(36, 39, 43, 1);
+$indian-red: rgba(225, 85, 84, 1);
+$pad: 8px;
+$sidebar-width: 280px;
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat';
+}
+
+h1 {
+    color: $indian-red;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom: 0;
+    width: $sidebar-width;
+    background-color: $davys-grey;
+    padding: $pad * 2;
+    box-shadow: 0 0 20px $davys-grey;
+
+    .brand {
+        img {
+            width: 100%;
+        }
+        margin-bottom: $pad * 2;
+    }
+
+    .nav-group {
+        .group-link {
+            padding: $pad;
+            display: flex;
+            color: white;
+            text-decoration: none;
+            .icon {
+                margin-right: $pad;
+            }
+            label {
+                cursor: pointer;
+            }
+        }
+
+        .group-link:hover {
+            background-color: $baby-blue-eyes;
+            color: $davys-grey;
+        }
+    }
+
+}
+
+main {
+    padding: $pad * 4;
+    margin-left: $sidebar-width + $pad; 
+}

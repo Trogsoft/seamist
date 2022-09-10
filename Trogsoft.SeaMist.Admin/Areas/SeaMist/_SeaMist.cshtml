@@ -1,11 +1,46 @@
-﻿<!DOCTYPE html>
+﻿@model Trogsoft.SeaMist.Admin.SeaMistPageModel
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewData["Title"] - SeaMist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="_content/Trogsoft.SeaMist.Admin/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>@ViewData["Title"] - @Model.SeaMistConfiguration.SiteTitle</title>
 </head>
 <body>
-    @RenderBody()
+
+    <div class="sidebar">
+        <div class="brand">
+            <img src="_content/Trogsoft.SeaMist.Admin/images/logo.png" alt="SeaMist Logo" />
+        </div>
+        <div class="nav-group">
+            <a href="/seamist" class="group-link">
+                <div class="icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <label>Dashboard</label>
+            </a>
+        </div>
+        <div class="nav-group">
+            <a href="/seamist/collections" class="group-link">
+                <div class="icon">
+                    <i class="fas fa-copy"></i>
+                </div>
+                <label>Content Collections</label>
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <h1>@ViewData["Title"]</h1>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>

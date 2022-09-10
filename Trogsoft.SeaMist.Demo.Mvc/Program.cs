@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Trogsoft.SeaMist.Demo.Mvc.Data;
 
 namespace Trogsoft.SeaMist.Demo.Mvc
 {
@@ -8,10 +11,19 @@ namespace Trogsoft.SeaMist.Demo.Mvc
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddSeaMist();
+            builder.Services.AddDbContext<DemoDb>(cfg =>
+            {
+                cfg.UseSqlServer(builder.Configuration.GetConnectionString("db"));
+            });
+            builder.Services.AddSeaMist(sm =>
+            {
+                sm.SiteTitle = "Trogsoft.com";
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDefaultIdentity<DemoUser>()
+                .AddEntityFrameworkStores<DemoDb>();
 
             var app = builder.Build();
 
@@ -28,6 +40,7 @@ namespace Trogsoft.SeaMist.Demo.Mvc
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseSeaMist();
